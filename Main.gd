@@ -1,16 +1,28 @@
 extends Node2D
 
-var total : int  = 0 #vai ser variável inteira sempre 
+var total : float = 0
 
-func _ready() -> void: 
+func _ready() -> void:
 	update_score(total)
-	
-func _process(delta: float) -> void: #vou usar para aumentar o score
-	total += 1
+
+func _process(delta: float) -> void:
+	print(delta)
+	total += delta
 	update_score(total)
+	if Input.is_action_pressed("left"):
+		$Score.rect_position.x -= 100 * delta
+	elif Input.is_action_pressed("right"):
+		$Score.rect_position.x += 100 * delta
 	
-func update_score(current_score: float) -> void: #recebe um float e não retorna nada (void)
-	#get_node("Score") #acessa o nodo
-	#$<nodo> também acessa o nodo de uma forma mais usual
-	#str() converte o valor para string 
-	$Score.text = str(current_score)  
+#func _input(event: InputEvent) -> void:
+#	if event.is_action_pressed("left"):
+#		$Score.rect_position.x -= 10
+#	elif event.is_action_pressed("right"):
+#		$Score.rect_position.x += 10
+#	
+func update_score(current_score: float) -> void:
+	$Score.text = str(current_score)
+	
+func _on_Timer_timeout() -> void:
+	pass
+	#$Score.visible = !$Score.visible
