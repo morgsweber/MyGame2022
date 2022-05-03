@@ -67,7 +67,8 @@ func _physics_process(delta):
 	velocity.y += gravity * delta
 	get_input_side()
 	velocity = move_and_slide(velocity, Vector2.UP)
-
-
-func _on_Area2D_body_entered(body: Node) -> void:
-	print("Saiu da tela")
+	
+	if position.y > 700:
+		print("Saiu da tela")
+		
+	
