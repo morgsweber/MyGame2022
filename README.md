@@ -1,4 +1,10 @@
-# meujogo2022
-Projeto desenvolvido na disciplina Proj. de Desenvolvimento de Jogos - 2022/1 - PUCRS
+# MyGame2022 #
 
-# Made with Godot!
+##### About the project
+
+This repository was created for a simple game just to practicing game development at class.
+##### Requirements
+* [Godot](https://godotengine.org/)
+##### Running the project
+
+First, you need to have the executable file of Godot. Then, you will open the project at Godot, and press F5 to run the game. 
