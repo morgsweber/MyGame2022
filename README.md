@@ -1,4 +1,4 @@
-# MyGame2022 #
+# My First Game - 2022 #
 
 ##### About the project
 
